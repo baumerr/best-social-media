@@ -4,7 +4,7 @@
     <form class='edit-post-form'>
         <div>
             <span>({{post.title}})</span>
-            <input name='post-body' type='text' value='{{post.post_body}}' />
+            </br><textarea id='post_body' name='post-body' type='text'>{{post.post_body}}</textarea>
             {{!-- <span>({{post.post_body}})</span> --}}
         </div>
         <div>
@@ -12,8 +12,8 @@
             |
             <a href ='/post/{{post.id}}'>{{post.comments.length}} {{format_plural 'comment' post.comments.length}}</a>
         </div>
-        <button tyoe='submit'>Save Post</button>
-        <button type='button' class='delete-post.btn'>Delete Post</button>
+        <button type='submit'>Save Post</button>
+        <button type='button' class='delete-post-btn'>Delete Post</button>
     </form>
 </article>
 

@@ -45,7 +45,7 @@ router.get('/', withAuth, (req, res) => {
       });
 });
 
-router.get('edit/:id', (req, res) => {
+router.get('/edit/:id', (req, res) => {
     Post.findOne({
         where: {
             id: req.params.id
@@ -85,9 +85,9 @@ router.get('edit/:id', (req, res) => {
 
           const post = dbPostData.get({ plain: true });
 
-          res.render('edit-post', {
+          res.render("edit-post", {
               post, 
-              loggedIn: req.sessions.loggedIn
+              loggedIn: req.session.loggedIn
           });
       })
       .catch(err => {
